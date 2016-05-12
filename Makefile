@@ -137,7 +137,6 @@ clean-sdk:
 	rm -rf $(VENDOR_SDK_DIR)
 	rm -f sdk
 	rm -f .sdk_patch_$(VENDOR_SDK)
-	make -C esp-open-lwip -f Makefile.open clean
 
 ESP32_RTOS_SDK-2.0.0.zip:
 	wget --content-disposition "https://github.com/espressif/ESP32_RTOS_SDK/archive/v2.0.0.zip"
