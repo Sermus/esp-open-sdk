@@ -36,7 +36,7 @@ rtos_hello_world-bins: rtos_hello_world
 	@$(OBJCOPY) --only-section .rodata -O binary $< eagle.app.v7.rodata.bin
 	@$(OBJCOPY) --only-section .irom0.text -O binary $< eagle.app.v7.irom0text.bin
 	@$(OBJCOPY) --only-section .drom0.text -O binary $< eagle.app.v7.drom0text.bin
-	@rm -f irom0_flash.bin drom1.bin user.ota
+	#@rm -f irom0_flash.bin drom1.bin user.ota
 	@echo "objcopy done"
 	@echo "launching gen_appbin"
 	@gen_appbin.py $< $(LDDIR)/$(LDSCRIPT) 0 0 . .
