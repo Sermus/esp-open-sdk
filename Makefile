@@ -23,8 +23,8 @@ UNZIP = unzip -q -o
 VENDOR_SDK_ZIP = $(VENDOR_SDK_ZIP_$(VENDOR_SDK))
 VENDOR_SDK_DIR = $(VENDOR_SDK_DIR_$(VENDOR_SDK))
 
-VENDOR_SDK_ZIP_2.0.0 = ESP32_RTOS_SDK-2.0.0.zip
-VENDOR_SDK_DIR_2.0.0 = ESP32_RTOS_SDK-2.0.0
+VENDOR_SDK_ZIP_2.0.0 = ESP31_RTOS_SDK-2.0.0.zip
+VENDOR_SDK_DIR_2.0.0 = ESP31_RTOS_SDK-2.0.0
 
 all: standalone sdk sdk_patch libnewlibport libstdc++port $(TOOLCHAIN)/bin/xtensa-esp108-elf-gcc
 	@echo
@@ -138,5 +138,5 @@ clean-sdk:
 	rm -f sdk
 	rm -f .sdk_patch_$(VENDOR_SDK)
 
-ESP32_RTOS_SDK-2.0.0.zip:
-	wget --content-disposition "https://github.com/espressif/ESP32_RTOS_SDK/archive/v2.0.0.zip"
+ESP31_RTOS_SDK-2.0.0.zip:
+	wget --content-disposition "https://github.com/espressif/ESP31_RTOS_SDK/archive/v2.0.0.zip"
